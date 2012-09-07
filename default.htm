@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="MobileDeviceDetector.js"></script>
+</head>
+<body>
+
+	<dl>
+		<dt>Android:</dt>
+		<dd id="androidDD"></dd>
+		<dt>iOS:</dt>
+		<dd id="iosDD"></dd>
+		<dt>iPhone:</dt>
+		<dd id="iphoneDD"></dd>
+		<dt>iPad:</dt>
+		<dd id="ipadDD"></dd>
+		<dt>iPod:</dt>
+		<dd id="ipodDD"></dd>
+	</dl>
+
+	<script>
+		$(document).ready(function(){
+			$('#androidDD').html(String($.isAndroid()));
+			$('#iosDD').html(String($.isiOS()));
+			$('#iphoneDD').html(String($.isiPhone()));
+			$('#ipadDD').html(String($.isiPad()));
+			$('#ipodDD').html(String($.isiPod()));
+		});
+
+	if($.isAndroid()) {
+		// Do something!
+		// Redirect to Android-site?
+		//window.location = 'http://android.com';
+	}
+
+	</script>
+</body>
+</html>
