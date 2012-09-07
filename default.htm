@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Mobile Device Detector</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="MobileDeviceDetector.js"></script>
 </head>
@@ -27,13 +27,17 @@
 			$('#iphoneDD').html(String($.isiPhone()));
 			$('#ipadDD').html(String($.isiPad()));
 			$('#ipodDD').html(String($.isiPod()));
+
+			if($.isAndroid()) {
+				//window.location = 'http://android.com';
+			}
+
+			if($.isiOS()) {
+				//window.location = 'http://itunes.com';
+			}
 		});
 
-	if($.isAndroid()) {
-		// Do something!
-		// Redirect to Android-site?
-		//window.location = 'http://android.com';
-	}
+	
 
 	</script>
 </body>
